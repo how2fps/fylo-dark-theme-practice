@@ -222,19 +222,19 @@ nav img {
 
 .quotes-container {
   background: #181f2a;
-  position: relative;
   padding-top: 4rem;
   padding-bottom: 3rem;
+  position: relative;
 }
 
-.quotes-container:after {
+.quotation-mark:after {
   content: open-quote;
   color: #65e2d9;
   font-family: "Raleway", sans-serif;
   font-size: 10rem;
   position: absolute;
-  top: 0;
-  left: 5%;
+  top: -2px;
+  left: 60px;
 }
 
 .quote {
@@ -243,6 +243,8 @@ nav img {
   width: 90%;
   margin: 0 auto;
   margin-bottom: 3rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   padding: 3rem;
   border-radius: 7px;
   -webkit-box-shadow: 0 0 0px 9px #1c2431;
@@ -411,14 +413,366 @@ footer {
 }
 
 .social-icons {
-  margin: 0 auto;
-  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem 0;
+}
+
+.social-icons a {
+  cursor: pointer;
+  margin: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: white 4px solid;
 }
 
 .social-icons i {
-  margin: 1rem 2rem;
-  border-radius: 100vh;
-  -webkit-box-shadow: 0 0 0 10px #0b1523, 0 0 0 11px white;
-          box-shadow: 0 0 0 10px #0b1523, 0 0 0 11px white;
+  margin: 0 auto;
+}
+
+@media (min-width: 1440px) {
+  nav {
+    padding: 3rem 3rem;
+  }
+  nav img {
+    width: 300px;
+  }
+  .nav-list {
+    gap: 7rem;
+  }
+  .nav-list .nav-item {
+    list-style: none;
+  }
+  .nav-list .nav-item .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+  }
+  .intro {
+    background: url(/images/bg-curvy-desktop.svg) no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+  }
+  .intro img {
+    width: initial;
+    margin: 2rem 0 2.5rem;
+  }
+  .intro h1 {
+    font-size: 3rem;
+    line-height: 1.4;
+    max-width: 30ch;
+  }
+  .intro2 p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    max-width: 55ch;
+  }
+  .perks-container {
+    padding: 10rem 9rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .perks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+  }
+  .perks img {
+    margin-bottom: 3rem;
+  }
+  .perks h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .perks p {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 40ch;
+  }
+  .productive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #181f2a;
+    padding: 0rem 9rem 9rem 9rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5rem;
+  }
+  .productive img {
+    margin-bottom: 4rem;
+    width: 50%;
+  }
+  .productive .text-container {
+    width: 50%;
+  }
+  .productive .text-container h1 {
+    text-align: start;
+    font-size: 4rem;
+    max-width: 14ch;
+  }
+  .productive .text-container p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-top: 1.6rem;
+  }
+  .productive .text-container a {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-decoration: none;
+    color: #65e2d9;
+    height: wrap;
+    width: 250px;
+    height: 40px;
+    border-bottom: #65e2d9 2px solid;
+  }
+  .productive .text-container a img {
+    width: initial;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    margin-top: 7px;
+    padding-top: 0;
+    margin-left: 11px;
+  }
+  .quotes-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3rem;
+    padding: 4rem 9rem 13rem 9rem;
+    position: relative;
+  }
+  .quotation-mark:after {
+    font-size: 15rem;
+    top: -40px;
+    left: 180px;
+  }
+  .quote {
+    background: #202a3c;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    padding: 3rem;
+    border-radius: 7px;
+    -webkit-box-shadow: 0 0 0px 9px #1c2431;
+            box-shadow: 0 0 0px 9px #1c2431;
+  }
+  .quote p {
+    font-size: 1.5rem;
+  }
+  .profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2.5rem;
+    gap: 2rem;
+  }
+  .profile img {
+    border-radius: 100vh;
+    width: 60px;
+  }
+  .profile h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+  }
+  .profile p {
+    font-size: 1.3rem;
+  }
+  .early-access-container {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #181f2a), color-stop(50%, #0b1523));
+    background: linear-gradient(180deg, #181f2a 50%, #0b1523 50%);
+    width: 100%;
+    padding: 10rem 20rem;
+  }
+  .early-access {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-radius: 5px;
+    background: #1c2431;
+    width: 95%;
+    margin: 0 auto;
+    padding: 4rem 0;
+    border-radius: 8px;
+    -webkit-box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3);
+  }
+  .early-access h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .early-access p {
+    text-align: center;
+    width: 70%;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 80%;
+    gap: 3rem;
+  }
+  .form input {
+    background: white;
+    display: block;
+    color: black;
+    padding: initial;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 1.4rem;
+    border-radius: 100vh;
+  }
+  .form .btn {
+    padding: initial;
+    display: block;
+    width: 60%;
+    padding: 1.4rem;
+  }
+  footer {
+    background: #0b1523;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .logo {
+    width: 50%;
+  }
+  .location,
+  .phone,
+  .email {
+    margin-top: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .location img,
+  .phone img,
+  .email img {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    min-width: 20px;
+  }
+  .location p,
+  .phone p,
+  .email p {
+    font-size: 1.4rem;
+    padding: 0 2rem;
+  }
+  .about-us,
+  .contact-us {
+    list-style: none;
+    margin-top: 2rem;
+  }
+  .about-us li a,
+  .contact-us li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+  .social-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 3rem 0;
+  }
+  .social-icons a {
+    cursor: pointer;
+    margin: 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: white 4px solid;
+  }
+  .social-icons i {
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -167,26 +167,28 @@ nav {
 
 .quotes-container {
   background: $mainbg;
-  position: relative;
   padding-top: 4rem;
   padding-bottom: 3rem;
+  position: relative;
+}
+.quotation-mark {
   &:after {
     content: open-quote;
     color: $cyan;
     font-family: $raleway;
     font-size: 10rem;
     position: absolute;
-    top: 0;
-    left: 5%;
+    top: -2px;
+    left: 60px;
   }
 }
-
 .quote {
   background: $quotesbg;
   color: white;
   width: 90%;
   margin: 0 auto;
   margin-bottom: 3rem;
+  transform: scale(1);
   padding: 3rem;
   border-radius: 7px;
   box-shadow: 0 0 0px 9px $introbg;
@@ -307,11 +309,299 @@ footer {
 }
 
 .social-icons {
-  margin: 0 auto;
-  font-size: 3rem;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  padding: 3rem 0;
+  a {
+    cursor: pointer;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: white 4px solid;
+  }
   i {
-    margin: 1rem 2rem;
-    border-radius: 100vh;
-    box-shadow: 0 0 0 10px $footerbg, 0 0 0 11px white;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop) {
+  nav {
+    padding: 3rem 3rem;
+    img {
+      width: 300px;
+    }
+  }
+  .nav-list {
+    gap: 7rem;
+    .nav-item {
+      list-style: none;
+      .nav-link {
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+      }
+    }
+  }
+  .intro {
+    background: url(/images/bg-curvy-desktop.svg) no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+    img {
+      width: initial;
+      margin: 2rem 0 2.5rem;
+    }
+    h1 {
+      font-size: 3rem;
+      line-height: 1.4;
+      max-width: 30ch;
+    }
+    &2 {
+      p {
+        font-size: 1.6rem;
+        line-height: 1.7;
+        max-width: 55ch;
+      }
+    }
+  }
+  .perks-container {
+    padding: 10rem 9rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .perks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+
+    img {
+      margin-bottom: 3rem;
+    }
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      text-align: center;
+      max-width: 40ch;
+    }
+  }
+
+  .productive {
+    display: flex;
+    background: $mainbg;
+    padding: 0rem 9rem 9rem 9rem;
+    align-items: center;
+    gap: 5rem;
+    img {
+      margin-bottom: 4rem;
+      width: 50%;
+    }
+    .text-container {
+      width: 50%;
+      h1 {
+        text-align: start;
+        font-size: 4rem;
+        max-width: 14ch;
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        margin-top: 1.6rem;
+      }
+      a {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        color: $cyan;
+        height: wrap;
+        width: 250px;
+        height: 40px;
+        border-bottom: $cyan 2px solid;
+        img {
+          width: initial;
+          transform: scale(1.2);
+          margin-top: 7px;
+          padding-top: 0;
+          margin-left: 11px;
+        }
+      }
+    }
+  }
+
+  .quotes-container {
+    display: flex;
+    gap: 3rem;
+    padding: 4rem 9rem 13rem 9rem;
+    position: relative;
+  }
+  .quotation-mark {
+    &:after {
+      font-size: 15rem;
+      top: -40px;
+      left: 180px;
+    }
+  }
+  .quote {
+    background: $quotesbg;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    transform: scale(1);
+    padding: 3rem;
+    border-radius: 7px;
+    box-shadow: 0 0 0px 9px $introbg;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    gap: 2rem;
+    img {
+      border-radius: 100vh;
+      width: 60px;
+    }
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  .early-access-container {
+    background: linear-gradient(180deg, $mainbg 50%, $footerbg 50%);
+    width: 100%;
+    padding: 10rem 20rem;
+  }
+  .early-access {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    background: $introbg;
+    width: 95%;
+    margin: 0 auto;
+    padding: 4rem 0;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px 2px rgba($color: #000000, $alpha: 0.3);
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+    p {
+      text-align: center;
+      width: 70%;
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    gap: 3rem;
+    input {
+      background: white;
+      display: block;
+      color: black;
+      padding: initial;
+      width: 100%;
+      margin: 2rem 0;
+      padding: 1.4rem;
+      border-radius: 100vh;
+    }
+    .btn {
+      padding: initial;
+      display: block;
+      width: 60%;
+      padding: 1.4rem;
+    }
+  }
+
+  footer {
+    background: $footerbg;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  .location,
+  .phone,
+  .email {
+    margin-top: 2rem;
+    display: flex;
+    img {
+      align-self: flex-start;
+      min-width: 20px;
+    }
+    p {
+      font-size: 1.4rem;
+      padding: 0 2rem;
+    }
+  }
+
+  .about-us,
+  .contact-us {
+    list-style: none;
+    margin-top: 2rem;
+    li {
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        line-height: 2;
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    padding: 3rem 0;
+    a {
+      cursor: pointer;
+      margin: 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      border: white 4px solid;
+    }
+    i {
+      margin: 0 auto;
+    }
   }
 }
